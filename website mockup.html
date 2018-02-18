@@ -12,6 +12,7 @@
 		console.log("whoo!");
 		var ticked = "url(assets/" + ticker + ".png";
 		$('#image-area').css('background-image', ticked);
+		$('#image-area').html('');
 	}
 	</script>
 	<script type = "text/javascript" src = "treehacks.js"></script>
@@ -37,16 +38,46 @@ s
 			"the platform for ethical investing"
 		</div>
 		<div class = "bubble-links">
+			<a href = "#recommendations">
 				<div class = "bubbles" id = "bubble-market">
 				</div>
+			</a>
+			<a href = "#why">
 				<div class = "bubbles" id = "bubble-upload">
 				</div>
+			</a>
+			<a href = "#data">
 				<div class = "bubbles" id = "bubble-about">
 				</div>
+			</a>
 		</div>
 	</div>
 	<div id = "recommendations">
-		recommendations
+		<div id = "rec-content">
+			<span class = "titleish">barclays (<b>vxx</b>)</span> vxx is an exchange-traded note operated by barclays, a financial services company based in the united kingdom that has continually tried to improve
+			the diversity of its workplace.<br>
+			<span class = "titleish">colgate-palmolive (<b>cl</b>)</span> colgate-palmolive is a company that has no end in sight. its workplace policies encourage diversity, and it has been named one of the 100 best companies for working mothers. <br>
+			<span class = "titleish">macy's (<b>m</b>)</span> macy's inc., parent company of one of the most famous department stores in the nation, often tries to strive for ethical practices, promoting its ethical brands.<br>
+		</div>
+		<div id = "rec-start">
+			recommendations:
+			<p style="font-size:4vh">these recommendations were three of the stocks with the best predicted outcomes from our model. our model is based on monthly trends in the stock market and in companies' performance.</p>
+		</div>
+	</div>
+	<div id = "data">
+		<div id = "search">
+			<input type="text" id="stockSearch" placeholder="stock name">
+			<ul id = "searchTable">
+			</ul>
+		</div>
+		<div id = "right-side">
+			d a t a
+			<div id = "image-area">
+				<p style="font-family:'Ubuntu', sans-serif; font-size:4vh;">
+				we used machine learning algorithms on the most recent real-time stock data, testing models ranging from complex recurrent neural networks and SVRs to basic linear regression. ultimately, we optimized exponential moving averages to use multiple-length windows concurrently, drawing insights on whether the stock will perform better or worse in the next time step based on their crossover ratio.
+			</p>
+			</div>
+		</div>
 	</div>
 	<div id = "why">
 		<div class = "why-title">
@@ -57,16 +88,6 @@ s
 			by investing in companies that are good to the environment, their workers, and the world around them,
 			you are <b>giving back</b>.
 		</div>
-	</div>
-	<div id = "data">
-		<div id = "search">
-			<input type="text" id="stockSearch" placeholder="stock name">
-			<ul id = "searchTable">
-			</ul>
-		</div>
-		<div id = "image-area"></div>
-	</div>
-	<div id = "about">
 	</div>
 </body>
 </html>
