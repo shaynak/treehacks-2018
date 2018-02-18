@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<link href="treehacks.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu|Bellefair|Roboto+Mono" rel="stylesheet">
+	<!--<script type = "text/javascript" src = "dataSetGen.js"></script>-->
+	<script type = "text/javascript">
+	function clicked(ticker) {
+		"use strict";
+		console.log("whoo!");
+		var ticked = "url(assets/" + ticker + ".png";
+		$('#image-area').css('background-image', ticked);
+		$('#image-area').html('');
+	}
+	</script>
+	<script type = "text/javascript" src = "treehacks.js"></script>
+</head>
+<body>
+	<div id = "home">
+		<div id = "filler"></div>
+		<!--
+		<div id = "bg">
+		<svg id="stock-market" preserveAspectRatio="none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366.93 768.44">
+			<title>stock market background</title>
+
+			<path d="M1366.5,597.5l-32-29-13-48-9,9-16-59h-15l-17-65-6,14-10-14h-11l-18-60s-3,35-10,6l-7-29-27-61-6,6-12-23h-13l-23-46h-16l-23-24-11,14-28-23-7,23-9-17-17,6-9.11,2.87-8.11,15.72-15-17.93-9.4,3.42-22.22-14.27-17.26-6.48-32.3-12.72-23.15-13.92-6.49,17.26-10.59,6-3.24,20.34,10.6,29.13-6.23,15-14.87-11.61-18.3-32.72-24.36-46.47-3.24,8.63-37.85-7.5-20.6-36.14L723,111.42l-19-2.64L700,115.53l-9,16.06L682.18,122l-23.84-15.8-8.54,11.62L635,121.1l-3-.55-16.41-3-5.55,5.21L600,112.57,574.5,104.5l-17,14-18-22-20,21-7,23-14-23-16,90-14-17-7,31-14-25-15,25-12-3-25-8-9,17-7-23-28,23-11-14-23,24h-16l-23,46h-13l-12,23-6-6-27,61-7,29c-7,29-10-6-10-6l-18,60h-11l-10,14-6-14-17,65h-15l-16,59-9-9-13,48-30,17-26-17-33,55" transform="translate(0.93 -95.31)" style="fill:none;stroke:#d01d00;stroke-miterlimit:10"/>
+s
+			<path d="M0,251.35l37.5,7.15,26-7,16,20h22v12h26l12,23,21-6,11,16,15-7,6,28,14,19,20-25,8,40h20v47l24-14,11,24,19-12,14,36,11,24,10-12,8,38,11-9,9,78,10-6,14,80h14l10,23,24-27,15,11,9-19,14,4,17-14,11,19,30,9,18-31,14-33,14,15,17,35,27,25,12-22,9-43h12l9,23,11-23,16-25,10,20,26-34,10-31,11,7,15-39,15,22,13,3,15,14,7,59s-6,8,9,20l15,12,14-16,7,14,13-17v-26l18,23s-1-5,25,20l26,25v-15l18,12,14,31,12-28,15,4,13-34,7,5,7,17,8-13,16-23,10-36,8,11,10-17,10-39,13,10,16-38,12,14,18-33,17,6,11-59s-15-20,11,11,22,17,22,17l17-47,18,7,13-27,16-53,12,7,12-38,16,14,13-53,19,3,15-34" transform="translate(0.93 -95.31)" style="fill:none;stroke:#277700;stroke-miterlimit:10"/>
+
+		</svg></div> 
+		-->
+		<div class = "titletext"> 
+			e t h i n v e s t
+		</div>
+		<div class = "subtext">
+			"the platform for ethical investing"
+		</div>
+		<div class = "bubble-links">
+			<a href = "#recommendations">
+				<div class = "bubbles" id = "bubble-market">
+				</div>
+			</a>
+			<a href = "#why">
+				<div class = "bubbles" id = "bubble-upload">
+				</div>
+			</a>
+			<a href = "#data">
+				<div class = "bubbles" id = "bubble-about">
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id = "recommendations">
+		<div id = "rec-content">
+			<span class = "titleish">barclays (<b>vxx</b>)</span> vxx is an exchange-traded note operated by barclays, a financial services company based in the united kingdom that has continually tried to improve
+			the diversity of its workplace.<br>
+			<span class = "titleish">colgate-palmolive (<b>cl</b>)</span> colgate-palmolive is a company that has no end in sight. its workplace policies encourage diversity, and it has been named one of the 100 best companies for working mothers. <br>
+			<span class = "titleish">macy's (<b>m</b>)</span> macy's inc., parent company of one of the most famous department stores in the nation, often tries to strive for ethical practices, promoting its ethical brands.<br>
+		</div>
+		<div id = "rec-start">
+			recommendations:
+			<p style="font-size:4vh">these recommendations were three of the stocks with the best predicted outcomes from our model. our model is based on monthly trends in the stock market and in companies' performance.</p>
+		</div>
+	</div>
+	<div id = "data">
+		<div id = "search">
+			<input type="text" id="stockSearch" placeholder="stock name">
+			<ul id = "searchTable">
+			</ul>
+		</div>
+		<div id = "right-side">
+			d a t a
+			<div id = "image-area">
+				<p style="font-family:'Ubuntu', sans-serif; font-size:4vh;">
+				we used machine learning algorithms on the most recent real-time stock data, testing models ranging from complex recurrent neural networks and SVRs to basic linear regression. ultimately, we optimized exponential moving averages to use multiple-length windows concurrently, drawing insights on whether the stock will perform better or worse in the next time step based on their crossover ratio.
+			</p>
+			</div>
+		</div>
+	</div>
+	<div id = "why">
+		<div class = "why-title">
+			why ethinvest?
+		</div>
+		<div class = "why-content">
+			ethical companies are more likely to <b>do well</b>, both literally and figuratively.
+			by investing in companies that are good to the environment, their workers, and the world around them,
+			you are <b>giving back</b>.
+		</div>
+	</div>
+</body>
+</html>
