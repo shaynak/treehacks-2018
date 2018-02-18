@@ -208,14 +208,13 @@ path {
 #rec-content {
 	width:50vw;
 	margin-right:5vw;
-	margin-top:5vh;
-	font-family: 'Roboto Mono', monotype;
+	margin-top:calc(8vh + 2vw);
 	float:right;
 }
 
 #rec-start {
 	margin-left:5vw;
-	margin-top:5vh;
+	margin-top:calc(7vh + 2.5vw);
 	width:35vw;
 	font-family: 'Roboto Mono', monotype;
 	float:left;
