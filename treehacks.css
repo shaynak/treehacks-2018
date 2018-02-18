@@ -10,6 +10,7 @@ body {
 	position:relative;
 }
 #stock-market {
+	width:98vw;
 	height:100vh;
 }
 path {
@@ -57,7 +58,6 @@ path {
 	width:1vh;
 	height:1vh;
 	border-radius:1vh;
-	background-color:white;
 	transition:1s;
 }
 #bubble-market {
@@ -73,7 +73,7 @@ path {
 	margin:auto;
 }
 .bubbles:hover {
-	background-color:#444444;
+	background-color:white;
 	transition:1s;
 	cursor:pointer;
 }
