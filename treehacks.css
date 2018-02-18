@@ -5,6 +5,24 @@ body {
 	position:relative;
 	height:100vh;
 }
+#bg {
+	width:100%;
+	position:relative;
+}
+#stock-market {
+	height:100vh;
+}
+path {
+  stroke-dasharray: 3000;
+  animation: dash 10s linear;
+  animation-direction:reverse;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 3000;
+  }
+}
 #home {
 	background-color:black;
 	background-size: cover;
@@ -15,23 +33,12 @@ body {
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
-.filler {
-	height:7vh;
-	width:100vh;
-}
-.logo {
-	height:65vh;
-	width:65vh;
-	border-radius:65vh;
-	background-color:white;
-	margin-left:calc((100% - 65vh)/2);
-}
 .titletext {
 	font-family: 'Roboto Mono', monotype;
 	font-size:8vh;
 	color:white;
 	text-align:center;
-	margin-top:35vh;
+	margin-top:calc(-100vh + 42vh);
 }
 .subtext {
 	font-family: 'Roboto Mono', monotype;
