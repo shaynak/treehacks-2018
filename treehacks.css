@@ -149,6 +149,10 @@ path {
     max-height:75vh;
 }
 
+#search {
+	float:left;
+}
+
 #searchTable li a {
     border: 1px solid #ddd; /* Add a border to all links */
     margin-top: -1px; /* Prevent double borders */
@@ -165,6 +169,14 @@ path {
     text-decoration: none; /* Remove default text underline */
     display: block; /* Make it into a block element to fill the whole list */
     color:black;
+}
+#image-area {
+	float:right;
+	width:60vw;
+	margin-right:5vw;
+	height:80vh;
+	margin-top:6vh;
+	background-color:red;
 }
 ::-webkit-scrollbar {
     width: 8px;

@@ -10,11 +10,9 @@ $(document).ready(function() {
 		var input = this.value.toUpperCase();
 		for (var i = 0; i < tickerNames2.length; i++) {
 			var ticker = tickerNames2[i];
-			console.log(ticker);
 			if (ticker.indexOf(input) > -1) {
-				console.log('yay!');
-				$("#searchTable").append('<li><a href = "#">' + ticker + '</a></li>');
+				$("#searchTable").append('<li><a href = "javascript:clicked(\'' + ticker + '\')">' + ticker + '</a></li>');
 			}
 		}
-	})
+	});
 });

@@ -6,6 +6,14 @@
 	<link href="treehacks.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu|Bellefair|Roboto+Mono" rel="stylesheet">
 	<!--<script type = "text/javascript" src = "dataSetGen.js"></script>-->
+	<script type = "text/javascript">
+	function clicked(ticker) {
+		"use strict";
+		console.log("whoo!");
+		var ticked = "url(assets/" + ticker + ".png";
+		$('#image-area').css('background-image', ticked);
+	}
+	</script>
 	<script type = "text/javascript" src = "treehacks.js"></script>
 </head>
 <body>
@@ -51,10 +59,12 @@ s
 		</div>
 	</div>
 	<div id = "data">
-		<input type="text" id="stockSearch" placeholder="stock name">
-		<ul id = "searchTable">
-
-		</ul>
+		<div id = "search">
+			<input type="text" id="stockSearch" placeholder="stock name">
+			<ul id = "searchTable">
+			</ul>
+		</div>
+		<div id = "image-area"></div>
 	</div>
 	<div id = "about">
 	</div>
