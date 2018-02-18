@@ -46,14 +46,16 @@ body {
 	background-color:white;
 	transition:1s;
 }
-#bubble-about {
+#bubble-market {
+	background-color:red;
 	float:left;
 }
 #bubble-upload {
-	margin-top:-1vh;
+	background-color:blue;
 	float:right;
 }
-#bubble-why {
+#bubble-about {
+	background-color:green;
 	margin:auto;
 }
 .bubbles:hover {
