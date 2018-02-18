@@ -134,14 +134,14 @@ path {
 	background-color:white;
 }
 #stockSearch {
-	width:20vw;
+	width:25vw;
 	height:6vh;
 	margin-left:3vw;
 	margin-top:6vh;
 	font-family:'Ubuntu', sans-serif;
 }
 #searchTable {
-	width:20vw;
+	width:25vw;
 	height:auto;
 	margin-left:3vw;
 	margin-top:1.5vh;
@@ -151,6 +151,7 @@ path {
 	font-family:'Ubuntu', sans-serif;
 	list-style-type: none;
     padding: 0;
+    text-align:center;
     max-height:75vh;
 }
 
