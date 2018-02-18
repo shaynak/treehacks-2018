@@ -34,12 +34,20 @@ path {
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
+
+@keyframes titleanimate {
+	from {color: black;}
+    to {color: white;}
+}
+
 .titletext {
 	font-family: 'Roboto Mono', monotype;
 	font-size:8vh;
 	color:white;
 	text-align:center;
 	margin-top:calc(-100vh + 42vh);
+
+	animation: titleanimate 2s linear; 
 }
 .subtext {
 	font-family: 'Roboto Mono', monotype;
@@ -47,6 +55,9 @@ path {
 	color:white;
 	text-align:center;
 	margin-top:0vh;
+
+	animation-delay: 20s;
+	animation: titleanimate 2s linear; 
 }
 .bubble-links {
 	margin-top:1.5vh;
