@@ -118,3 +118,63 @@ path {
 	margin-top:calc(15vh + 9vw);
 	text-align:center;
 }
+#recommendations {
+	width:100%;
+	height:100vh;
+	background-color:#444444;
+}
+#data {
+	width:100%;
+	height:100vh;
+	background-color:black;
+}
+#stockSearch {
+	width:20vw;
+	height:6vh;
+	margin-left:3vw;
+	margin-top:6vh;
+	font-family:'Ubuntu', sans-serif;
+}
+#searchTable {
+	width:20vw;
+	height:auto;
+	margin-left:3vw;
+	margin-top:1.5vh;
+	overflow:auto;
+	background-color:white;
+	color:black;
+	font-family:'Ubuntu', sans-serif;
+	list-style-type: none;
+    padding: 0;
+    max-height:75vh;
+}
+
+#searchTable li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    display: block; /* Make it into a block element to fill the whole list */
+    color:black;
+}
+#searchTable li a:hover {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    display: block; /* Make it into a block element to fill the whole list */
+    color:black;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+	border-radius:4px;
+	transition:1s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #787878;
+	transition:1s;
+}
