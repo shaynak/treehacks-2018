@@ -1,17 +1,17 @@
 body {
 	margin:0;
-}
-.parallax {
-	position:relative;
-	height:100vh;
-}
+} /*
 #bg {
 	width:100%;
 	position:relative;
 }
 #stock-market {
+	margin-top:10vh;
 	width:98vw;
 	height:100vh;
+}
+svg {
+	pointer-events:none;
 }
 path {
   stroke-dasharray: 3000;
@@ -23,16 +23,16 @@ path {
   to {
     stroke-dashoffset: 3000;
   }
+} */
+#filler {
+	height:7vh;
 }
 #home {
 	background-color:black;
-	background-size: cover;
 	width:100%;
 	height:100vh;
 	top:0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
+	margin-top:0;
 }
 
 @keyframes titleanimate {
@@ -45,7 +45,8 @@ path {
 	font-size:8vh;
 	color:white;
 	text-align:center;
-	margin-top:calc(-100vh + 42vh);
+	/*margin-top:calc(-100vh + 32vh); for svg */
+	margin-top:33vh;
 
 	animation: titleanimate 2s linear; 
 }
@@ -88,8 +89,32 @@ path {
 	transition:1s;
 	cursor:pointer;
 }
+#why {
+	background-color:white;
+	width:100%;
+	height:100vh;
+}
 #about {
 	background-color:#444444;
 	width:100%;
 	height:100vh;
+}
+.why-title {
+	width:40%;
+	margin-left:5%;
+	float:left;
+	font-family: 'Roboto Mono', monotype;
+	font-size:7vh;
+	margin-top:40vh;
+	text-align:center;
+}
+.why-content {
+	float:right;
+	color:#444444;
+	font-family:'Ubuntu', sans-serif;
+	margin-right:5%;
+	width:45%;
+	font-size:calc(3vh + 1vw);
+	margin-top:calc(15vh + 9vw);
+	text-align:center;
 }
