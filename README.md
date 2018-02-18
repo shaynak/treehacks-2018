@@ -1,3 +1,6 @@
+# ethinvest
+### TreeHacks 2018
+
 ## Inspiration
 
 Child labor, unsanitary working conditions, low wages, and so many more forms of worker exploitation occur every single day.  The goal of reducing this labor exploitation inspired us to come up with novel ways to incentivize companies to have ethical practices.  In this vein, we built ethinvest, a platform for users to invest in companies known to be ethical.  
