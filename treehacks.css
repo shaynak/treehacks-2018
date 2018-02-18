@@ -33,23 +33,19 @@ path {
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
-.filler {
-	height:7vh;
-	width:100vh;
-}
-.logo {
-	height:65vh;
-	width:65vh;
-	border-radius:65vh;
-	background-color:white;
-	margin-left:calc((100% - 65vh)/2);
-}
 .titletext {
 	font-family: 'Roboto Mono', monotype;
 	font-size:8vh;
 	color:white;
 	text-align:center;
-	margin-top:2vh;
+	margin-top:calc(-100vh + 42vh);
+}
+.subtext {
+	font-family: 'Roboto Mono', monotype;
+	font-size:3vh;
+	color:white;
+	text-align:center;
+	margin-top:0vh;
 }
 .bubble-links {
 	margin-top:1.5vh;
@@ -64,14 +60,16 @@ path {
 	background-color:white;
 	transition:1s;
 }
-#bubble-about {
+#bubble-market {
+	background-color:red;
 	float:left;
 }
 #bubble-upload {
-	margin-top:-1vh;
+	background-color:blue;
 	float:right;
 }
-#bubble-why {
+#bubble-about {
+	background-color:green;
 	margin:auto;
 }
 .bubbles:hover {
