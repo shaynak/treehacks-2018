@@ -42,17 +42,16 @@ path {
 
 .titletext {
 	font-family: 'Roboto Mono', monotype;
-	font-size:8vh;
+	font-size:calc(6vh + 1.5vw);
 	color:white;
 	text-align:center;
 	/*margin-top:calc(-100vh + 32vh); for svg */
 	margin-top:33vh;
-
 	animation: titleanimate 2s linear; 
 }
 .subtext {
 	font-family: 'Roboto Mono', monotype;
-	font-size:3vh;
+	font-size:calc(1vh + 1vw);
 	color:white;
 	text-align:center;
 	margin-top:0vh;
@@ -104,7 +103,7 @@ path {
 	margin-left:5%;
 	float:left;
 	font-family: 'Roboto Mono', monotype;
-	font-size:7vh;
+	font-size:calc(5vh + 1.5vw);
 	margin-top:40vh;
 	text-align:center;
 	color:white;
@@ -128,6 +127,12 @@ path {
 	text-align:center;
 	color:white;
 }
+
+.right-text-style {
+	font-family:'Ubuntu', sans-serif; 
+	font-size:calc(1vh + 1.5vw);
+}
+
 #data {
 	width:100%;
 	height:100vh;
@@ -185,7 +190,7 @@ path {
 	height:80vh;
 	margin-top:6vh;
 	font-family: 'Roboto Mono', monotype;
-	font-size:7vh;
+	font-size:calc(5vh + 1.5vw);
 	color:#444444;
 	text-align:center;
 }
@@ -201,7 +206,7 @@ path {
 }
 
 .titleish {
-	font-size:6vh;
+	font-size:calc(3vh + 2vw);
 	font-family: 'Roboto Mono', monotype;
 	color:black;
 }
@@ -220,7 +225,11 @@ path {
 	font-family: 'Roboto Mono', monotype;
 	float:left;
 	color:#f6f6f6;
-	font-size:7vh;
+	font-size:calc(5vh + 1.5vw);
+}
+
+.rec-descriptions {
+	font-size:calc(1.5vh + 1.5vw);
 }
 
 ::-webkit-scrollbar {
