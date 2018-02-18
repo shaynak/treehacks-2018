@@ -3,189 +3,31 @@ $( document ).ready(function() {
 	var tickerNames = [];
 	var data_values = [];
 
-// for (i = 0; i < compNames.length; i++) {
-// 	var jsonURL = "https://cors-anywhere.herokuapp.com/http://d.yimg.com/aq/autoc?query=" + compNames[i] + "&region=US&lang=en-US";
-// 	$.getJSON( jsonURL, function( response ) {
-// 	  $.each( response.ResultSet.Result, function( key, val ) {
-// 	    if (val.exchDisp == "NYSE") {
-// 	    	tickerNames.push(val.symbol);
-// 	    }
-// 	  });
-// 	});
-// }
-var tickerNames2 = ["ACN","MMM","AFL","ALL-PB","V","VHS","VVV","VNTR","VNTV","WY","WYY","WHR",
-"WIT",
-
-"XRX",
-
-"AJG",
-
-"APTS",
-
-"APTV",
-
-"ATR",
-
-"AVT",
-
-"ANTM",
-
-"ANTX",
-
-"CAJ",
-
-"CL",
-
-"CMI",
-
-"DNB",
-
-"WD",
-
-"DVMT",
-
-"EMN",
-
-"ECL",
-
-"ECR",
-
-"EW",
-
-"EWJ",
-
-"EWW",
-
-"LLY",
-
-"GE",
-
-"DNA",
-
-"GER",
-
-"GNRC",
-
-"GNRT",
-
-"G",
-
-"GDI",
-
-"GLOP",
-
-"GTES",
-
-"FLR",
-
-"HASI",
-
-"HCA",
-
-"HLT",
-
-"HGV",
-
-"JCI",
-
-"DAR",
-
-"IP",
-
-"IPSC",
-
-"IPOA U",
-
-"VXX",
-
-"JILL",
-
-"LDOS",
-
-"KMT",
-
-"MSO",
-
-"GNRT",
-
-"M",
-
-"MMD",
-
-"TUC",
-
-"NGG",
-
-"PXD",
-
-"NOK",
-
-"OSK",
-
-"DPS",
-
-"PX",
-
-"PXD",
-
-"PFGC",
-
-"RLGY",
-
-"PBIPB",
-
-"ROK",
-
-"RSG",
-
-"CRM",
-
-"SNDR",
-
-"TEL",
-
-"TDOC",
-
-"TDC",
-
-"AES",
-
-"TKR"];
-
-// async function waitForTickers() {
-// 	console.log('hi');
-// 	await resolveAfter2Seconds(tickerNames.length);
-// 	console.log(tickerNames.length);
-// 	dataVals();
-// }
-
-function dataVals() {
-for (var name in tickerNames2) {
-	var timestep = "DAILY";
-	var apikey = "M8QJDBY8PEMN93KA";
-	var json2URL = "https://www.alphavantage.co/query?function=TIME_SERIES_" + timestep + "&symbol=" + name + "&apikey=" + apikey;
-	$.getJSON(json2URL, function( response ) {
-		$.each( response, function( key, val ) {
-			data_values.push(val);
-		});
-	});
-
-}}
-// waitForTickers();
-
-// console.log(tickerNames);
-dataVals();
-console.log(data_values);
+	var tickerNames2 = ["ACN","MMM","AFL","ALL-PB","V","VHS","VVV","VNTR","VNTV","WY","WYY","WHR",
+	"WIT","XRX","AJG","APTS","APTV","ATR","AVT","ANTM","ANTX","CAJ","CL","CMI","DNB","WD","DVMT",
+	"EMN","ECL","ECR","EW","EWJ","EWW","LLY","GE","DNA","GER","GNRC","GNRT","G","GDI","GLOP",
+	"GTES","FLR","HASI","HCA","HLT","HGV","JCI","DAR","IP","IPSC","IPOA U","VXX","JILL","LDOS",
+	"KMT","MSO","GNRT","M","MMD","TUC","NGG","PXD","NOK","OSK","DPS","PX","PXD","PFGC","RLGY",
+	"PBIPB","ROK","RSG","CRM","SNDR","TEL","TDOC","TDC","AES","TKR"];
+
+	var dict = new Object();
+
+	function dataVals() {
+		console.log(tickerNames2);
+		for (i = 0; i < tickerNames2.length; i++) {
+			var timestep = "Daily";
+			var apikey = "EQ806SLRGC5UC9DF";
+			var accessString = "Time Series (" + timestep + ")"; 
+			var json2URL = "https://www.alphavantage.co/query?function=TIME_SERIES_" + timestep + "&symbol=" + tickerNames2[i] + "&outputsize=compact&datatype=json&apikey=" + apikey;
+			$.getJSON(json2URL, function(response) {
+				$.each(response["Time Series (Daily)"], function(key, val) {
+					data_values.push(val);
+				});
+			});
+			dict[tickerNames2[i]] = data_values;
+			data_values = [];
+		}
+	}
+	dataVals();
+	console.log(dict);
 });
-
-function resolveAfter2Seconds(x) {
-	return new Promise(resolve => {
-		setTimeout(() => {
-			console.log(5);
-			if (x > 10) {
-				console.log('pies!!');
-				resolve(x);
-			}
-		}, 5000);
-	});
-}
