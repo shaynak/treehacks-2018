@@ -5,6 +5,24 @@ body {
 	position:relative;
 	height:100vh;
 }
+#bg {
+	width:100%;
+	position:relative;
+}
+#stock-market {
+	height:100vh;
+}
+path {
+  stroke-dasharray: 3000;
+  animation: dash 10s linear;
+  animation-direction:reverse;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 3000;
+  }
+}
 #home {
 	background-color:black;
 	background-size: cover;
